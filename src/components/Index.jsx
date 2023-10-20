@@ -3,6 +3,7 @@ import EmpresasContainer from './EmpresasContainer'
 import React, { useState } from 'react';
 import data from '../api.json';
 import Empresa from './Empresa';
+import Header from './Header'
 
 
 const Index = () => {
@@ -33,7 +34,7 @@ const Index = () => {
   return (
       
     <div className="body">
-      
+      <Header/>
       <div className="main">
         <div className="sidebar__box">
         <h1 className='sidebar__title__max'>FILTRAR</h1>
