@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import data from '../api.json';
 import Empresa from './Empresa';
 import Header from './Header'
+import Hero from './Hero'
 
 
 const Index = () => {
@@ -35,6 +36,7 @@ const Index = () => {
       
     <div className="body">
       <Header/>
+      <Hero/>
       <div className="main">
         <div className="sidebar__box">
         <h1 className='sidebar__title__max'>FILTRAR</h1>
