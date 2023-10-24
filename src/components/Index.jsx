@@ -5,6 +5,8 @@ import data from '../api.json';
 import Empresa from './Empresa';
 import Header from './Header'
 import Hero from './Hero'
+import Footer from './Footer'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 
 const Index = () => {
@@ -110,6 +112,7 @@ const Index = () => {
       ))}
       </EmpresasContainer>
       </div>
+      <Footer/>
     </div>
   );
 };
