@@ -1,0 +1,45 @@
+
+
+.card{
+    margin: 15px;
+    display:flex;
+    
+
+
+    
+}
+
+.card-button{
+  background-color: rgb(235, 220, 140);
+  position:relative;
+  padding-left:5px;
+  padding-right:5px;
+  top:0px;
+  left: 250px;
+  border: 0px solid ;
+  border-radius: 20px;
+}
+
+.btn-primary{
+    background-color: white;
+  border-image: none;
+  width: 20px;
+  text-decoration: none;
+  border:none;
+  
+}
+
+
+
+.card__img{
+    background-color:rgb(23, 182, 231);
+    width: 400px;
+    height: 150px;
+}
+
+.btn-contacto{
+    margin-left: 200px;
+    background-color:rgb(213, 213, 213);
+    border-radius: 10px;
+}
+
