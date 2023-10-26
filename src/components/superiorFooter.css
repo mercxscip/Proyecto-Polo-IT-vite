@@ -1,0 +1,53 @@
+.superior__footer {
+    font-family: var(--primary-font);
+    color: white;
+    width: auto;
+    height: 430px;
+    background-image: url(../assets/polo-it-footer.png);
+    padding-top: 100px;
+    padding-left: 100px;
+}
+
+.sf__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 600px;
+    place-items: center;
+}
+
+.sf__btn {
+    background-color: rgb(197, 30, 49);
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    display: grid;
+    place-items: center;
+    width: 155px;
+    height: 30px;
+}
+
+.title__box {
+    grid-column: 1 / 1;
+    grid-row: 1 / 2;
+}
+
+.line__box {
+    width: 1px;
+    height: 200px;
+    background-color: white;
+    grid-column: 2 / 2;
+    grid-row: 1 / 2;
+}
+
+.text__box {
+    grid-column: 3 / 3;
+    grid-row: 1 / 1;
+}
+
+.span__asociate, .span__poloit {
+    font-weight: 900;
+}
+
+.span__socios {
+    font-weight: 600;
+}

@@ -7,6 +7,7 @@ import Header from './Header'
 import Hero from './Hero'
 import Footer from './Footer'
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import SuperiorFooter from './SuperiorFooter';
 
 
 const Index = () => {
@@ -112,6 +113,7 @@ const Index = () => {
       ))}
       </EmpresasContainer>
       </div>
+      <SuperiorFooter/>
       <Footer/>
     </div>
   );
