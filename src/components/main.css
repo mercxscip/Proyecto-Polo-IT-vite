@@ -30,17 +30,18 @@
 
 .main {
     display: flex;
+    padding-top: 20px;
 }
 
 .sidebar__box{
     font-family: var(--primary-font);
     display: flex;
     flex-direction: column;
-    width: var(--espacio-128);
+    width: 200px;
     height: 700px;
     padding: var(--espacio-16);
-    box-shadow: 1px 5px 20px black;
-    margin-right: 40px;
+    box-shadow: 0.1px 1px 10px black;
+
 }
 
 .sidebar__title__max {
@@ -66,7 +67,7 @@
 }
 
 .checkbox__styles:checked{
-    background-color: black;
+    background-color: rgba(197, 42, 60);
 }
 
 .checkbox__styles:hover{

@@ -1,10 +1,9 @@
-
+import './empresasContainer.css'
 
 const ProductContainer = (props) => {
     return (
     <section>
-        <h2>Empresas</h2>
-        <div>
+        <div className='product__container'>
         {props.children}
         </div>
     </section>

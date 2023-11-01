@@ -1,0 +1,85 @@
+.card__img {
+  width: auto;
+  height: 100px;
+  background-color: rgb(227, 144, 144);
+  transition: 0.7s ease-in-out;
+  border-radius: 4px;
+}
+
+.card-img-top {
+  object-fit: contain;
+  width: 308px;
+  height: 100px;
+}
+
+.card__img:hover {
+  background-color: rgb(34, 76, 154);
+}
+
+.card-img-top {
+  height: 100px;
+}
+
+.card {
+  font-family: var(--primary-font);
+  height: 260px;
+  width: 310px;
+  
+}
+
+.card-text {
+  font-size: 13px;
+  font-weight: 300;
+  color: black;
+  margin: 0;
+}
+
+.pill__btn {
+  background-color: rgb(255, 237, 118);
+  border-style: none;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 15px;
+  font-size: 10px;
+  font-weight: 500;
+  grid-column: 2 /2;
+  grid-row: 1;
+}
+
+.pill__btn2 {
+  background-color: rgb(124, 196, 251);
+  border-style: none;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 15px;
+  font-size: 10px;
+  font-weight: 500;
+  grid-column: 2 /2;
+  grid-row: 2;
+}
+
+.card-title {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.icon__btn {
+  width: 15px;
+  margin: 2px;
+}
+.contact__btn {
+  border-style: none;
+  background-color: rgb(221, 221, 221);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  font-weight: 800;
+  height: 20px;
+  width: 80px;
+  margin-top: 2px;
+}
