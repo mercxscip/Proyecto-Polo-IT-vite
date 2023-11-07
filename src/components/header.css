@@ -20,71 +20,18 @@ header {
     
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .logo__poloit {
     max-width: 260px;
 }
 
-.ul__container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-}
+@media (max-width: 450px) {
+    .logo__poloit {
+        width: 60px;
+    }
 
-
-.li__container  {
-    background-color: #ededed;
-    width: 150px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.with__submenu:hover .submenu {
-    display: block;
-
-}
-
-.submenu {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    width: 150px;
-    border-radius: 10px;
-    
-}
-
-.submenu__item {
-    list-style: none;
-    background: #fff ;
-    padding-left:0;
-    padding-top: 10px;
-    border-radius: 5px;
-}
-
-.submenu__link {
-    display: block;
-    transition: background .3s ease-in-out;
-    position: relative;
-    border-radius: 5px;
-}
-
-.submenu__link:hover {
-    background-color: #ededed;
-}
-
-.search__bar {
-    background-image: url(./img/icons/search.png);
-    background-repeat: no-repeat;
-    background-size: 18px;
-    padding-left: 20px;
-    border-radius: 5px;
-    border-color: rgb(91, 206, 255);
-    border-style: solid;
-    border-width: 1px;
+    header {
+        padding: 5px;
+        display: grid;
+        place-items: center;
+    }
 }
