@@ -14,15 +14,20 @@ const Index = () => {
   const [filtroPildoras, setFiltroPildoras] = useState([]);
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
+  const [navCollapse, setNavCollapse] = useState(false)
   useEffect(() => {
-    fetch(`http://localhost:3000/?categoria=${filtroPildoras[0]||""}&page=${page}`).then((res) => {
-      return res.json()
-    }).then((res)=> {
-      setData(res.data)
-    })
+    fetch(
+      `http://localhost:3000/?categoria=${filtroPildoras[0] || ""}&page=${page}`
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        setData(res.data);
+      });
   }, [filtroPildoras, page]);
   const handleFiltrarPildora = (pildora) => {
-    setPage(1)
+    setPage(1);
     if (filtroPildoras.includes(pildora)) {
       setFiltroPildoras(filtroPildoras.filter((item) => item !== pildora));
     } else {
@@ -30,14 +35,18 @@ const Index = () => {
     }
   };
 
-  
-
   return (
     <div className="body">
       <Header />
       <Hero />
       <div className="main">
-        <div className="sidebar__box">
+          
+        <div className={`sidebar__box ${navCollapse  ? "navCollaps" : ""}`}>
+        <div className="mobile__toggler" onClick={e => setNavCollapse(!navCollapse)}>
+            <a href="" data-bs-toggle="modal" data-bs-target="#navbarModal">
+              <i className="toggler bi bi-filter"></i>
+            </a>
+          </div>
           <h1 className="sidebar__title__max">FILTRAR</h1>
           <h2 className="sidebar__title">IT</h2>
           {["Tecnología", "Programación", "Sistemas", "Software"].map(
@@ -54,17 +63,19 @@ const Index = () => {
             )
           )}
           <h2 className="sidebar__title">SERVICIOS</h2>
-          {["Abogados", "Consultores", "Soluciones", "Pagos", "Asesores"].map((pildora) => (
-            <label key={pildora}>
-              <input
-                type="checkbox"
-                className="checkbox__styles"
-                checked={filtroPildoras.includes(pildora)}
-                onChange={() => handleFiltrarPildora(pildora)}
-              />
-              {pildora}
-            </label>
-          ))}
+          {["Abogados", "Consultores", "Soluciones", "Pagos", "Asesores"].map(
+            (pildora) => (
+              <label key={pildora}>
+                <input
+                  type="checkbox"
+                  className="checkbox__styles"
+                  checked={filtroPildoras.includes(pildora)}
+                  onChange={() => handleFiltrarPildora(pildora)}
+                />
+                {pildora}
+              </label>
+            )
+          )}
           <h2 className="sidebar__title">OTROS</h2>
           {["Marketing", "Internet", "Idiomas"].map((pildora) => (
             <label key={pildora}>
@@ -78,7 +89,7 @@ const Index = () => {
             </label>
           ))}
           <h2 className="sidebar__title">TODOS</h2>
-          <p>
+          <p className="sidebar__text">
             Deselecciona todas las píldoras para mostrar todas las tarjetas
             nuevamente.
           </p>

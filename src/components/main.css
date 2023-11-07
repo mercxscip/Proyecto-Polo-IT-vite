@@ -41,7 +41,7 @@
     height: 700px;
     padding: var(--espacio-16);
     box-shadow: 0.1px 1px 10px black;
-
+    border-radius: 10px;
 }
 
 .sidebar__title__max {
@@ -72,4 +72,49 @@
 
 .checkbox__styles:hover{
     background-color: rgb(165, 165, 165);
+}
+
+.mobile__toggler {
+    display: none;
+}
+
+@media (max-width: 450px) {
+    .mobile__toggler {
+        display: block;
+    }
+    .navCollaps {
+        width: 10px;
+        height: 600px;
+    }
+
+    .navCollaps .sidebar__title__max, .navCollaps .sidebar__title, .navCollaps label, .navCollaps input, .navCollaps p {
+        display: none;
+    }
+
+    label {
+        font-size: 9px;
+    }
+
+    .checkbox__styles {
+        width: 8px;
+        height: 8px;
+    }
+
+    .sidebar__title {
+        font-size: 15px;
+    }
+    
+    .sidebar__title__max {
+        font-size: 17px;
+    }
+
+    .sidebar__text {
+        font-size: 12px;
+    }
+
+    .sidebar__box {
+        height: 600px;
+        width: 200px;
+        padding: 20px;
+    }
 }
