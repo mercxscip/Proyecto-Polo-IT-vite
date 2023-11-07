@@ -1,0 +1,17 @@
+.pagination__box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+
+@media (max-width: 450px) {
+    .page-link {
+        width: 30px;
+        height: 30px;
+        padding: 8px;
+        font-size: 10px;
+        display: grid;
+        place-items: center;
+    }
+}

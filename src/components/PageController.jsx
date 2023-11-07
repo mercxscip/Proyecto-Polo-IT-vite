@@ -1,4 +1,5 @@
 import Pagination from "react-bootstrap/Pagination";
+import "./pageController.css"
 
 export const PageController = (props) => {
     const { currentPage, nextPage, prevPage, hasNextPage, hasPrevPage, setPage, totalPages } = props
@@ -9,8 +10,8 @@ export const PageController = (props) => {
     const handleNextShow = ()=> setPage(nextPage)
     const handlePrevShow = ()=> setPage(prevPage)
     return (
-        <Pagination>
-        {hasPrevPage&&<Pagination.First onClick={handleFirst}/>}
+        <Pagination className="pagination__box">
+        {hasPrevPage&&<Pagination.First className="pagination__first" onClick={handleFirst}/>}
         {hasPrevPage&&<Pagination.Prev onClick={handlePrev}/>}
         {currentPage>2&&<Pagination.Item onClick={handleFirst}>{1}</Pagination.Item>}
         {hasPrevPage&&<Pagination.Ellipsis />}
