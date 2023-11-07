@@ -12,12 +12,12 @@ const Footer = () => {
                 </div>
                 <a className='footer__btn' href="https://optin.myperfit.com/subscribe/poloit/7hgKwhcK">¡QUIERO EL NEWS!</a>
                 <div className='icon__content'>
-                    <a className='footer__icon' href="https://www.youtube.com/channel/UCt0AmOQHBXyYIMXMviCvX5g/featured"><i class="bi bi-youtube"></i></a>
-                    <a className='footer__icon' href="https://twitter.com/PoloITBsAs"><i class="bi bi-twitter"></i></a>
-                    <a className='footer__icon' href="https://www.instagram.com/poloitbuenosaires/"><i class="bi bi-instagram"></i></a>
-                    <a className='footer__icon' href="https://www.linkedin.com/company/polo-it-de-buenos-aires/"><i class="bi bi-linkedin"></i></a>
-                    <a className='footer__icon' href="https://es-la.facebook.com/poloitbuenosaires/"><i class="bi bi-facebook"></i></a>
-                    <a className='footer__icon' href="https://wa.me/5491157826061"><i class="bi bi-whatsapp"></i></a>
+                    <a className='footer__icon' href="https://www.youtube.com/channel/UCt0AmOQHBXyYIMXMviCvX5g/featured"><i className="bi bi-youtube"></i></a>
+                    <a className='footer__icon' href="https://twitter.com/PoloITBsAs"><i className="bi bi-twitter"></i></a>
+                    <a className='footer__icon' href="https://www.instagram.com/poloitbuenosaires/"><i className="bi bi-instagram"></i></a>
+                    <a className='footer__icon' href="https://www.linkedin.com/company/polo-it-de-buenos-aires/"><i className="bi bi-linkedin"></i></a>
+                    <a className='footer__icon' href="https://es-la.facebook.com/poloitbuenosaires/"><i className="bi bi-facebook"></i></a>
+                    <a className='footer__icon' href="https://wa.me/5491157826061"><i className="bi bi-whatsapp"></i></a>
                 </div>
                 <a className='footer__mail' href='mailto:gerente@poloitbuenosaires.org.ar'>poloit@poloitbuenosaires.org.ar</a>
                 <p className='footer__credits'>Diseñado por Mercedes y Melanie</p>

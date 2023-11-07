@@ -15,14 +15,15 @@ import feedly from "../components/img/icons/feedly.png";
 import blog from "../components/img/icons/blog.png";
 
 const Empresa = (props) => {
-    function recortarString(str, length) {
-        if (str.length <= length) {
-          return str;
-        } else {
-          return str.slice(0, length) + '...';
-        }
-      }
-      const cardText = recortarString(props.desc, 110)
+  function recortarString(str, length) {
+    if (str.length <= length) {
+      return str;
+    } else {
+      return str.slice(0, length) + "...";
+    }
+  }
+  const cardText = recortarString(props.desc, 110);
+  const socialCard = Object.keys(props.socialMedia);
   return (
     <div className="">
       <div className="card">
@@ -34,87 +35,38 @@ const Empresa = (props) => {
         <div className="card-body d-flex flex-column justify-content-between">
           <div className="row">
             <h5 className="card-title col-5">{props.name}</h5>
-            {props.pill && (
-              <button className="pill__btn col">{props.pill}</button>
-            )}
-            {props.pill2 && (
-              <button className="pill__btn2 col">{props.pill2}</button>
-            )}
-          <p className="card-text">{cardText}</p>
+            {props.pills &&
+              props.pills.map((pill, index) => {
+                const colorPillList = ["pill__btn", "pill__btn2"];
+                return (
+                  <button
+                    key={`${props.name}-${pill}`}
+                    className={`${colorPillList[index]} col`}
+                  >
+                    {pill}
+                  </button>
+                );
+              })}
+            <p className="card-text">{cardText}</p>
           </div>
           <div className="">
             <div className="btn__box row">
               <div className="icon__box col-8">
-                {props.redA && (
-                  <a href={props.redA} className="">
-                    <img className="icon__btn" src={linkedin} alt="" />
-                  </a>
-                )}
-                {props.redB && (
-                  <a href={props.redB} className="">
-                    <img className="icon__btn" src={twitter} alt="" />
-                  </a>
-                )}
-                {props.redC && (
-                  <a href={props.redC} className="">
-                    <img className="icon__btn" src={facebook} alt="" />
-                  </a>
-                )}
-                {props.redD && (
-                  <a href={props.redD} className="">
-                    <img className="icon__btn" src={youtube} alt="" />
-                  </a>
-                )}
-                {props.redE && (
-                  <a href={props.redE} className="">
-                    <img className="icon__btn" src={instagram} alt="" />
-                  </a>
-                )}
-                {props.redF && (
-                  <a href={props.redF} className="">
-                    <img className="icon__btn" src={pinterest} alt="" />
-                  </a>
-                )}
-                {props.redG && (
-                  <a href={props.redG} className="">
-                    <img className="icon__btn" src={github} alt="" />
-                  </a>
-                )}
-                {props.redH && (
-                  <a href={props.redH} className="">
-                    <img className="icon__btn" src={dribbble} alt="" />
-                  </a>
-                )}
-                {props.redI && (
-                  <a href={props.redI} className="">
-                    <img className="icon__btn" src={figma} alt="" />
-                  </a>
-                )}
-                {props.redJ && (
-                  <a href={props.redJ} className="">
-                    <img className="icon__btn" src={twitch} alt="" />
-                  </a>
-                )}
-                {props.redK && (
-                  <a href={props.redK} className="">
-                    <img className="icon__btn" src={spotify} alt="" />
-                  </a>
-                )}
-                {props.redL && (
-                  <a href={props.redL} className="">
-                    <img className="icon__btn" src={podcast} alt="" />
-                  </a>
-                )}
-                {props.redM && (
-                  <a href={props.redM} className="">
-                    <img className="icon__btn" src={feedly} alt="" />
-                  </a>
-                )}
-                {props.redN && (
-                  <a href={props.redN} className="">
-                    <img className="icon__btn" src={blog} alt="" />
-                  </a>
-                )}
+                {props.socialMedia.linkedin &&<a href={props.socialMedia.linkedin} className="">
+                  <img className="icon__btn" src={linkedin} alt="" />
+                </a>}
+                {props.socialMedia.facebook&&<a href={props.socialMedia.facebook} className="">
+                  <img className="icon__btn" src={facebook} alt="" />
+                </a>}
+                {props.socialMedia.twitter&&<a href={props.socialMedia.twitter} className="">
+                  <img className="icon__btn" src={twitter} alt="" />
+                </a>}
+                {props.socialMedia.instagram&&<a href={props.socialMedia.instagram} className="">
+                  <img className="icon__btn" src={instagram} alt="" />
+                </a>}
+                {props.socialMedia.youtube&&<a href={props.socialMedia.youtube} className="">
+                  <img className="icon__btn" src={youtube} alt="" />
+                </a>}
               </div>
               {props.contact && (
                 <a className="col-4" href={props.contact}>
