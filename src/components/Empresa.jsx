@@ -4,15 +4,6 @@ import twitter from "../components/img/icons/tw.png";
 import linkedin from "../components/img/icons/in.png";
 import youtube from "../components/img/icons/yt.png";
 import instagram from "../components/img/icons/ig.png";
-import pinterest from "../components/img/icons/pinterest.png";
-import github from "../components/img/icons/github.png";
-import dribbble from "../components/img/icons/dribbble.png";
-import figma from "../components/img/icons/figma.png";
-import twitch from "../components/img/icons/twitch.png";
-import spotify from "../components/img/icons/spotify.png";
-import podcast from "../components/img/icons/podcast.png";
-import feedly from "../components/img/icons/feedly.png";
-import blog from "../components/img/icons/blog.png";
 
 const Empresa = (props) => {
   function recortarString(str, length) {

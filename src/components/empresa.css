@@ -83,3 +83,26 @@
   width: 80px;
   margin-top: 2px;
 }
+
+@media (max-width: 450px) {
+  .card {
+    width: 230px;
+    margin-left: 5px;
+  }
+
+  .card-img-top {
+    width: 230px;
+  }
+
+  .card-text {
+    font-size: 10px;
+  } 
+
+  .btn__box {
+    width: 180px;
+  }
+
+  .pill__btn, .pill__btn2 {
+    font-size: 7px;
+  }
+}
