@@ -81,7 +81,9 @@
 
 @media (max-width: 450px) {
     .mobile__toggler {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .navCollaps .sidebar__title__max, .navCollaps .sidebar__title, .navCollaps label, .navCollaps input, .navCollaps p, .navCollaps .total__cards {
@@ -90,7 +92,7 @@
     
     
     label {
-        font-size: 9px;
+        font-size: 13px;
     }
 
     .checkbox__styles {
@@ -117,13 +119,14 @@
     }
 
     .navCollaps {
-        width: 10px;
-        height: 10px;
+        width: 30px;
+        height: 30px;
         display: absolute;
         position: sticky;
         top: 50px;
         left: 370px;
         z-index: 100;
+        padding: 0;
     }
 
     .main {
