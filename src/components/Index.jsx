@@ -91,8 +91,8 @@ const Index = () => {
           />
         </EmpresasContainer>
       </div>
-      {/* <SuperiorFooter /> */}
-      {/* <Footer /> */}
+      <SuperiorFooter />
+      <Footer />
     </div>
   );
 };

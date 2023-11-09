@@ -51,3 +51,30 @@
 .span__socios {
     font-weight: 600;
 }
+
+@media (max-width: 450px) {
+    .sf__content {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    .sf__text, .text__box, .line__box {
+        display: none;
+    }
+    .superior__footer {
+        padding: 0;
+        height: 170px;
+    }
+    .sf__title {
+        font-size: 28px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .sf__btn {
+        margin-top: 5px;
+    }
+    .title__box {
+        display: grid;
+        place-items: center;
+    }
+}

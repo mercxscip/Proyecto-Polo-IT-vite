@@ -98,3 +98,30 @@ footer {
     color: rgb(168, 171, 201);
     text-align: end;
 }
+
+@media (max-width: 450px) {
+    .footer__politics, .footer__politics2, .footer__credits {
+        display: none;
+    }
+    .footer__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        height: 200px;
+    }
+    .footer__btn {
+        width: 170px;
+        height: 30px;
+    }
+    .icon__content {
+        display: flex;
+        justify-content: start;
+    }
+    .footer__mail {
+        text-align: start;
+    }
+    .footer__title, .footer__title2, .footer__title3 {
+        text-align: center;
+    }
+}
