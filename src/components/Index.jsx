@@ -1,6 +1,6 @@
 import "./main.css";
 import EmpresasContainer from "./EmpresasContainer";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 // import data from "../api.json";
 import Empresa from "./Empresa";
 import Header from "./Header";
@@ -9,12 +9,14 @@ import Footer from "./Footer";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import SuperiorFooter from "./SuperiorFooter";
 import { PageController } from "./PageController";
+import Filter from "./Filter";
 
 const Index = () => {
   const [filtroPildoras, setFiltroPildoras] = useState([]);
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
-  const [navCollapse, setNavCollapse] = useState(false)
+  const [resto, setResto] = useState(0);
+
   useEffect(() => {
     fetch(
       `http://localhost:3000/?categoria=${filtroPildoras[0] || ""}&page=${page}`
@@ -23,79 +25,35 @@ const Index = () => {
         return res.json();
       })
       .then((res) => {
+        setResto(9 - res.data.docs.length)
         setData(res.data);
       });
   }, [filtroPildoras, page]);
-  const handleFiltrarPildora = (pildora) => {
-    setPage(1);
-    if (filtroPildoras.includes(pildora)) {
-      setFiltroPildoras(filtroPildoras.filter((item) => item !== pildora));
-    } else {
-      setFiltroPildoras([...filtroPildoras, pildora]);
-    }
-  };
+
+  const listEmpty = new Array(resto).fill(" ")
+  console.log(resto)
+  console.log(listEmpty)
 
   return (
     <div className="body">
       <Header />
       <Hero />
       <div className="main">
-          
-        <div className={`sidebar__box ${navCollapse  ? "navCollaps" : ""}`}>
-        <div className="mobile__toggler" onClick={e => setNavCollapse(!navCollapse)}>
-            <a href="" data-bs-toggle="modal" data-bs-target="#navbarModal">
-              <i className="toggler bi bi-filter"></i>
-            </a>
-          </div>
-          <h1 className="sidebar__title__max">FILTRAR</h1>
-          <h2 className="sidebar__title">IT</h2>
-          {["Tecnología", "Programación", "Sistemas", "Software"].map(
-            (pildora) => (
-              <label key={pildora}>
-                <input
-                  type="checkbox"
-                  className="checkbox__styles"
-                  checked={filtroPildoras.includes(pildora)}
-                  onChange={() => handleFiltrarPildora(pildora)}
-                />
-                {pildora}
-              </label>
-            )
-          )}
-          <h2 className="sidebar__title">SERVICIOS</h2>
-          {["Abogados", "Consultores", "Soluciones", "Pagos", "Asesores"].map(
-            (pildora) => (
-              <label key={pildora}>
-                <input
-                  type="checkbox"
-                  className="checkbox__styles"
-                  checked={filtroPildoras.includes(pildora)}
-                  onChange={() => handleFiltrarPildora(pildora)}
-                />
-                {pildora}
-              </label>
-            )
-          )}
-          <h2 className="sidebar__title">OTROS</h2>
-          {["Marketing", "Internet", "Idiomas"].map((pildora) => (
-            <label key={pildora}>
-              <input
-                type="checkbox"
-                className="checkbox__styles"
-                checked={filtroPildoras.includes(pildora)}
-                onChange={() => handleFiltrarPildora(pildora)}
-              />
-              {pildora}
-            </label>
-          ))}
-          <h2 className="sidebar__title">TODOS</h2>
-          <p className="sidebar__text">
-            Deselecciona todas las píldoras para mostrar todas las tarjetas
-            nuevamente.
-          </p>
-        </div>
-
+        <Filter
+          className="filter__desktop"
+          filtroPildoras={filtroPildoras}
+          setFiltroPildoras={setFiltroPildoras}
+          setPage={setPage}
+          totalCards={data.totalDocs}
+        />
         <EmpresasContainer>
+          <Filter
+            className="filter__mobile"
+            filtroPildoras={filtroPildoras}
+            setFiltroPildoras={setFiltroPildoras}
+            setPage={setPage}
+            totalCards={data.totalDocs}
+          />
           {data.docs?.map((organizacion) => (
             <Empresa
               key={organizacion.id}
@@ -108,19 +66,33 @@ const Index = () => {
               contact={organizacion.contact}
             />
           ))}
+          {listEmpty.map((_,index)=> {
+            return (
+              <Empresa
+              key={"cardEmpty-"+index}
+              link={""}
+              img={""}
+              name={"cardEmpty"}
+              pills={[]}
+              desc={""}
+              socialMedia={""}
+              contact={""}
+            />
+            )
+          })}
+          <PageController
+            currentPage={data.page}
+            prevPage={data.prevPage}
+            nextPage={data.nextPage}
+            hasPrevPage={data.hasPrevPage}
+            hasNextPage={data.hasNextPage}
+            setPage={setPage}
+            totalPages={data.totalPages}
+          />
         </EmpresasContainer>
       </div>
-      <PageController
-        currentPage={data.page}
-        prevPage={data.prevPage}
-        nextPage={data.nextPage}
-        hasPrevPage={data.hasPrevPage}
-        hasNextPage={data.hasNextPage}
-        setPage={setPage}
-        totalPages={data.totalPages}
-      />
-      <SuperiorFooter />
-      <Footer />
+      {/* <SuperiorFooter /> */}
+      {/* <Footer /> */}
     </div>
   );
 };

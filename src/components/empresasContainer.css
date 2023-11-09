@@ -1,5 +1,6 @@
 .product__container {
     display: flex;
+    position: relative;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
@@ -10,5 +11,6 @@
     .product__container {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 }

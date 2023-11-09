@@ -14,10 +14,8 @@ const Empresa = (props) => {
     }
   }
   const cardText = recortarString(props.desc, 110);
-  const socialCard = Object.keys(props.socialMedia);
   return (
-    <div className="">
-      <div className="card">
+      <div className={`card ${props.name == "cardEmpty" && "opacity-0 d-none d-sm-block"}`}>
         <picture className="card__img">
           <a href={props.link}>
             <img src={props.img} className="card-img-top" alt="..." />
@@ -68,7 +66,6 @@ const Empresa = (props) => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

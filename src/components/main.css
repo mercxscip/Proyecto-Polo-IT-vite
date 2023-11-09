@@ -36,6 +36,7 @@
 .sidebar__box{
     font-family: var(--primary-font);
     display: flex;
+    position: sticky;
     flex-direction: column;
     width: 200px;
     height: 700px;
@@ -82,15 +83,12 @@
     .mobile__toggler {
         display: block;
     }
-    .navCollaps {
-        width: 10px;
-        height: 600px;
-    }
-
-    .navCollaps .sidebar__title__max, .navCollaps .sidebar__title, .navCollaps label, .navCollaps input, .navCollaps p {
+    
+    .navCollaps .sidebar__title__max, .navCollaps .sidebar__title, .navCollaps label, .navCollaps input, .navCollaps p, .navCollaps .total__cards {
         display: none;
     }
-
+    
+    
     label {
         font-size: 9px;
     }
@@ -117,4 +115,46 @@
         width: 200px;
         padding: 20px;
     }
+
+    .navCollaps {
+        width: 10px;
+        height: 10px;
+        display: absolute;
+        position: sticky;
+        top: 50px;
+        left: 370px;
+        z-index: 100;
+    }
+
+    .main {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
+.filter__desktop {
+    display: none;
+}
+
+.filter__mobile {
+    display: absolute;
+    position: sticky;
+    top: 50px;
+    left: 370px;
+    z-index: 100;
+    background-color: white;
+}
+@media (min-width: 900px) {
+    .filter__mobile {
+        display: none;
+    }
+    .filter__desktop {
+        display: block;
+    }
+}
+
+/* @media (max-width: 900px) {
+    .filter__desktop {
+        display: none;
+    }
+} */
