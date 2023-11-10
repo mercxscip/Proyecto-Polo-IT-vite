@@ -147,7 +147,7 @@
     z-index: 100;
     background-color: white;
 }
-@media (min-width: 900px){
+@media (min-width: 540px){
     .filter__mobile {
         display: none;
     }

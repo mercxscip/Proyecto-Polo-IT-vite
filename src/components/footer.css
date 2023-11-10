@@ -126,7 +126,7 @@ footer {
     }
 }
 
-@media (min-width: 900px) and (max-width: 1000px) {
+@media (min-width: 540px) and (max-width: 1000px) {
     .footer__content {
         width: auto;
     }

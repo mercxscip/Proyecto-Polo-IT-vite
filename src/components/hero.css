@@ -71,8 +71,10 @@
     }
 }
 
-@media (min-width: 900px) and (max-width: 1000px) {
+@media (min-width: 540px) and (max-width: 1000px) {
     .bg__hero__red {
         padding: 80px;
+        display: flex;
+        flex-direction: column;
     }
 }
