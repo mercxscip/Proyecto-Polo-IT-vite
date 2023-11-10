@@ -147,12 +147,15 @@
     z-index: 100;
     background-color: white;
 }
-@media (min-width: 900px) {
+@media (min-width: 900px){
     .filter__mobile {
         display: none;
     }
     .filter__desktop {
         display: block;
+    }
+    .sidebar__box {
+        height: 820px;
     }
 }
 
