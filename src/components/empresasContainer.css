@@ -14,3 +14,9 @@
         width: 100%;
     }
 }
+
+@media (min-width: 900px) and (max-width: 1000px) {
+    .product__container {
+        width: auto;
+    }
+}
