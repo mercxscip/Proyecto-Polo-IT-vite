@@ -13,7 +13,7 @@ nosotros, ya que conforman un grupo de empresas,
 profesionales y soluciones con una amplísima oferta de 
 
 productos y servicios. Te contamos quiénes son.</p>
-            <a className='hero__btn' href="">QUIERO ASOCIARME</a>
+            <a className='hero__btn' href="https://forms.gle/mbdo2Jb8cDyf8xeP8">QUIERO ASOCIARME</a>
         </div>
         </div>
         
