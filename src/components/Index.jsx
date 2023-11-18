@@ -1,7 +1,6 @@
 import "./main.css";
 import EmpresasContainer from "./EmpresasContainer";
 import React, { useEffect, useState, useMemo } from "react";
-// import data from "../api.json";
 import Empresa from "./Empresa";
 import Header from "./Header";
 import Hero from "./Hero";
